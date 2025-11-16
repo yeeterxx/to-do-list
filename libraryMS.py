@@ -6,14 +6,14 @@ class Books:
 
     def borrow(self):
         if self.available==True:
-            self.available==False
+            self.available=False
             print("book borrowed !!")
         else:
             print("book not available to borrow!!")
 
     def return_book(self):
         if self.available==False:
-            self.available==True
+            self.available=True
             print("book returned sucessfully!!")
         else:
             print("book already available!!")
@@ -49,22 +49,19 @@ while True:
             view_all()
 
         elif choice==2:
-            for i,book in enumerate(books):
-                status="available" if book.available else "unavailable"
-                print(f'{i}. {book.title}:{book.author}-{status}')
+            view_all()
             try:
              pick= int(input("pick book to borrow:"))
-             book[pick].borrow()
+             books[pick].borrow()
             except:
                 print("invalid request!!")
                 continue
 
         elif choice==3:
-            for i,book in enumerate(books):
-                print(f'{i}.{book.title}')
+            view_all()
             try:
                 pick=int(input("enter the book to return"))
-                book[pick].return_book()
+                books[pick].return_book()
             except:
                 print("invalid request")
                 continue
