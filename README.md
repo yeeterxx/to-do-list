@@ -11,3 +11,7 @@
 - implemented the system as a practise for oop
 - asks user for required task and performs it as necessary
 
+## 3) Students Grade Tracker
+- Added some extra feature in my grade tracker using OOP
+- Asks user for inputs and performs the required tasks 
+
